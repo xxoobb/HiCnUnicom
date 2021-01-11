@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ master ]
   schedule:
-    - cron: 30 04,23 * * ?
+    - cron: 30 04,23 * * *
   watch:
     types: started
     
@@ -47,7 +47,7 @@ jobs:
           env:
            haoma: ${{ secrets.HAOMA2 }}
            mm: ${{ secrets.MM2 }}
-           appid: ${{ secrets.APPID2 }}
+           appid: ${{ secrets.APPID }}
           run: |
            bash CnUnicom.sh
            
